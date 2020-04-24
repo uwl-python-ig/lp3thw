@@ -1,2 +1,5 @@
 # lp3thw
-Sharing our code as we work through Learn Python 3 the Hard Way by Zed Shaw
+We're working through [Learn Python 3 the Hard Way](https://alliance-primo.hosted.exlibrisgroup.com/permalink/f/l9c4fq/CP71290856150001451), and putting our code here so we can share work and learn from each other. 
+## Naming and storing files
+- There is (or will be) a directory for each exercise in the book.
+- Be sure to add your name or some other distinguishing string to your filenames to avoid overwriting other's work.
