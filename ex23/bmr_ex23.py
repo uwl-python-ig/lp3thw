@@ -21,3 +21,20 @@ def print_line(line, encoding, errors):
 languages = open("languages.txt", encoding="utf-8")
 
 main(languages, input_encoding, error)
+
+# I have so many questions about this script.
+
+# Errors:
+    # What are the options for the error var?
+        # SEE https://docs.python.org/3.6/library/codecs.html#error-handlers
+    # What do these various options do?
+    # Where do we see the errors in the output that this script creates in the command line?
+
+# What are all options for encodings?
+    # SEE https://docs.python.org/3.6/library/codecs.html#standard-encodings
+
+# My WSL terminal
+    # How come it doesn't display Unicode?
+    # (For that matter, neither does Atom on W10...)
+
+# And more...

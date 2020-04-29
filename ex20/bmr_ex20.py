@@ -1,4 +1,5 @@
-# I'm going to capitalize the first word in my comments--because I want to
+# HOW/WHEN did the fs change to xs in this file??
+
 # OK here we import the argv [function? module?] from the sys [module? package?]
     # This is what will allow the script to, in my words, collect and use command-line arguments
 from sys import argv
