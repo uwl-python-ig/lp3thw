@@ -70,6 +70,9 @@ This is similar to defining a function, where lines following the first line
     including def and args are indented by four spaces.
 So I'll say that they need to be indented because the indented lines of code are dependent
     on the line above.
+From LP3THW:
+    "A colon at the end of a line is how you tell Python you are going to create a new "block" of code,
+    and then indenting four spaces tells Python what lines of code are in that block."
 
 3. (Testing with all lines dedented)
 Python throws an error:
