@@ -13,7 +13,7 @@ if crust == "2":
 elif crust == "1":
     print(f"""
     Okay, since you entered {crust}, you are obviously a one who appreciates pizza.
-    I will deign to entreat with you.
+    I will deign to entreat further with you.
     We shall discuss pizza further.
 
     Tell me, would you care for olives to be on the pizza?
