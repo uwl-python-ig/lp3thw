@@ -31,25 +31,30 @@ Wonderful. Now, you sense that the book may be opened.
 Will you gently open to the title page (enter 'C'), or will you peer into the mid-text-block (enter 'D')?
             """)
             first = True
-        if choice == "A":
+        elif choice == "A":
             end("A most unfortunate choice.")
-        if choice == "C" and first == True:
+        elif choice == "C" and first == True:
             print("""
 You are indeed One who Appreciates the Tome of Excellence (OwAtToE).
 One final question--will you take notes in this book? Yes ('E') or no ('F')?
             """)
             second = True
-        if choice == "D":
+        elif choice == "D":
             end("A most unfortunate choice.")
-        if choice == "E" and second == True:
+        elif choice == "E" and second == True:
             print("You know, I really can't blame you. It is handy to take notes in a book. You shall pass on to the second test--the tree!")
             tree()
-        if choice == "F" and second == True:
+        elif choice == "F" and second == True:
             print("Most circumspect! Truly reverential of the ToE. Well, OK. Great. Oh, yes--the next test--the tree!")
             tree()
+        else:
+            end("It would seem that you have not followed the directions for input.")
 
 def tree():
     print("Test ex36 up to this point.")
+    # The plan for the next two three-part tests is to see if I can find a different way to structure each than the method used above.
+    # What might work? String more functions together? What else??
+    # Note that above I ONLY used if statements. I don't think this is a good thing...
     exit(0)
 
 def end(message):
