@@ -36,26 +36,65 @@ Will you gently open to the title page (enter 'C'), or will you peer into the mi
         elif choice == "C" and first == True:
             print("""
 You are indeed One who Appreciates the Tome of Excellence (OwAtToE).
-One final question--will you take notes in this book? Yes ('E') or no ('F')?
+One final question--will you take notes in this book? Yes ('Y') or no ('N')?
             """)
             second = True
         elif choice == "D":
             end("A most unfortunate choice.")
-        elif choice == "E" and second == True:
+        elif choice == "Y" and second == True:
             print("You know, I really can't blame you. It is handy to take notes in a book. You shall pass on to the second test--the tree!")
             tree()
-        elif choice == "F" and second == True:
+        elif choice == "N" and second == True:
             print("Most circumspect! Truly reverential of the ToE. Well, OK. Great. Oh, yes--the next test--the tree!")
             tree()
         else:
             end("It would seem that you have not followed the directions for input.")
 
 def tree():
-    print("Test ex36 up to this point.")
-    # The plan for the next two three-part tests is to see if I can find a different way to structure each than the method used above.
-    # What might work? String more functions together? What else??
-    # Note that above I ONLY used if statements. I don't think this is a good thing...
-    exit(0)
+    list = []
+    print("""
+You are now called upon to demonstrate a knowledge of trees.
+The task before you is to name three parts of a tree, and then remember which parts of a tree you have named.
+I know that it sounds simple.
+But you know, maybe that is fine.
+Maybe tests don't really need to be overly difficult.
+    """)
+    while len(list) < 3:
+        list.append(input("Name a part of a tree: "))
+
+    print("""
+Now. Which three parts of a tree did you just enter?
+Enter them as follows:
+1. Start with a left bracket ([)
+2. Enter your first and second items in single quotes (''), each followed by a comma and a space
+3. Enter your last item in single quotes, followed by a right square bracket (])
+4. Hit the 'enter key'
+    """)
+    memory = input("> ")
+
+    if memory == str(list):
+        print("""
+Perhaps you just looked back at what you entered in the terminal window.
+Oh, well... You passed the test, at any rate!
+Maybe tests *should* be at least moderately difficult?
+I shall have to check the Recommended Level of Difficulty for Tests Related to the Tome of Excellence (RLoDfTRttToE).
+        """)
+        ocean()
+    else:
+        print("Not quite right. Try again from the top!")
+        tree()
+
+"""
+Lots of improvements could be made to the tree function:
+- If it truly is a memory test the entered strings shouldn't be visible in the terminal window
+    --it might work like password entry, where strings aren't visible?
+- The user has to enter the string with brackets, quotes, and commas because of my lack of ability...
+    It should be possible to enter just the words, one at a time or all together with just spaces, etc.
+    to compare here, but I haven't taken the time to try something else out.
+"""
+
+def ocean():
+    end("Seems to be working up to the final function--ocean.")
 
 def end(message):
     print(message, "\nGAME OVER")
