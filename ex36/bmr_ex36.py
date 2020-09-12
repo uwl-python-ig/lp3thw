@@ -5,8 +5,8 @@ The Tome of Excellence
 from sys import exit
 
 def begin():
-    print("""
-After much reading and study, you have been gifted with the Tome of Excellence (ToE) by the Council of Gifting of the Tome of Excellence (CoGotToE).
+    print("""After much reading and study, you have been gifted with the Tome of Excellence (ToE)
+by the Council of Gifting of the Tome of Excellence (CoGotToE).
 This is Excellent!
 But don't get to excited.
 You will be thrice tested, each test having three parts.
@@ -24,8 +24,7 @@ def tome():
         choice = input("> ")
 
         if choice == "B":
-            print("""
-You are a most circumspect afficionado of tomes.
+            print("""You are a most circumspect afficionado of tomes.
 This is clearly stated as a requirement in the CoGotToE's Rules for Opening the Tome of Excellence (RfOtToE).
 Wonderful. Now, you sense that the book may be opened.
 Will you gently open to the title page (enter 'C'), or will you peer into the mid-text-block (enter 'D')?
@@ -34,8 +33,7 @@ Will you gently open to the title page (enter 'C'), or will you peer into the mi
         elif choice == "A":
             end("A most unfortunate choice.")
         elif choice == "C" and first == True:
-            print("""
-You are indeed One who Appreciates the Tome of Excellence (OwAtToE).
+            print("""You are indeed One Who Appreciates the Tome of Excellence (OWAtToE).
 One final question--will you take notes in this book? Yes ('Y') or no ('N')?
             """)
             second = True
@@ -52,8 +50,7 @@ One final question--will you take notes in this book? Yes ('Y') or no ('N')?
 
 def tree():
     list = []
-    print("""
-You are now called upon to demonstrate a knowledge of trees.
+    print("""You are now called upon to demonstrate a knowledge of trees.
 The task before you is to name three parts of a tree, and then remember which parts of a tree you have named.
 I know that it sounds simple.
 But you know, maybe that is fine.
@@ -62,8 +59,7 @@ Maybe tests don't really need to be overly difficult.
     while len(list) < 3:
         list.append(input("Name a part of a tree: "))
 
-    print("""
-Now. Which three parts of a tree did you just enter?
+    print("""Now. Which three parts of a tree did you just enter?
 Enter them as follows:
 1. Start with a left bracket ([)
 2. Enter your first and second items in single quotes (''), each followed by a comma and a space
@@ -73,7 +69,7 @@ Enter them as follows:
     memory = input("> ")
 
     if memory == str(list):
-        print("""
+        print("""You've done it!
 Perhaps you just looked back at what you entered in the terminal window.
 Oh, well... You passed the test, at any rate!
 Maybe tests *should* be at least moderately difficult?
@@ -94,7 +90,52 @@ Lots of improvements could be made to the tree function:
 """
 
 def ocean():
-    end("Seems to be working up to the final function--ocean.")
+    print("""Well, you've arrived at the final test.
+First off--listen--this last test will not really be that difficult.
+Yes, I realize that the difficulty of these tests has been, perhaps, Less Than Advertised at First (LTAaF).
+But I really don't think you have anything to complain about.
+So for your final question, I'll just ask, point blank, do you think that you are ready to read the ToE?
+Yes 'Y' or no 'N'?
+""")
+#Problem starts here
+    first_yes = False
+    second_yes = False
+
+"""
+There is something happening here that I don't understand.
+I think it must be to do with the way I'm using the first_yes and second_yes vars.
+All I get in the terminal is a neverending prompt.
+None of the printing below happens, and the prompt never ends or goes away.
+"""
+
+    while True:
+        choice = input("> ")
+
+    if choice == "Y" and first_yes == False and second_yes == False:
+        print("OK. I hear what you are saying. So, then, you're sure? 'Y' or 'N'.")
+        first_yes = True
+        second_yes = False
+    elif choice == "Y" and first_yes == True and second_yes == False:
+        print("""Good. Yes! Good. Right on. You know, you *are* ready.
+                ...
+
+                ...
+
+                But, I mean, are you sure?
+                'Y' or 'N'.
+                """)
+        first_yes == True
+        second_yes == True
+    elif choice == "Y" and first_yes == True and second_yes == True:
+        print("""I. AM. SO. PROUD. OF. YOU.
+                You really did a great job.
+                The ToE is yours to enjoy.
+                I think you'll find it a great read.
+                Enjoy and bon voyage my friend!
+                """)
+        exit(0)
+    else:
+        end("Aw shucks. You underestimate yourself! Still, no pressure. Try again later.")
 
 def end(message):
     print(message, "\nGAME OVER")
