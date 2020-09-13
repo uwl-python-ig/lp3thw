@@ -17,32 +17,30 @@ The Tests of the Tome of Excellence (TotToE) shall begin!
 
 def tome():
     print("What will you do first? Will you open the tome (enter 'A'), or closely inspect the cover and binding (enter 'B')?")
-    first = False
-    second = False
+    first_tome = False
+    second_tome = False
 
     while True:
-        choice = input("> ")
+        choice_tome = input("> ")
 
-        if choice == "B":
+        if choice_tome == "B":
             print("""You are a most circumspect afficionado of tomes.
 This is clearly stated as a requirement in the CoGotToE's Rules for Opening the Tome of Excellence (RfOtToE).
 Wonderful. Now, you sense that the book may be opened.
-Will you gently open to the title page (enter 'C'), or will you peer into the mid-text-block (enter 'D')?
-            """)
-            first = True
-        elif choice == "A":
+Will you gently open to the title page (enter 'C'), or will you peer into the mid-text-block (enter 'D')?""")
+            first_tome = True
+        elif choice_tome == "A":
             end("A most unfortunate choice.")
-        elif choice == "C" and first == True:
+        elif choice_tome == "C" and first_tome == True:
             print("""You are indeed One Who Appreciates the Tome of Excellence (OWAtToE).
-One final question--will you take notes in this book? Yes ('Y') or no ('N')?
-            """)
-            second = True
-        elif choice == "D":
+One final question--will you take notes in this book? Yes ('Y') or no ('N')?""")
+            second_tome = True
+        elif choice_tome == "D":
             end("A most unfortunate choice.")
-        elif choice == "Y" and second == True:
+        elif choice_tome == "Y" and second_tome == True:
             print("You know, I really can't blame you. It is handy to take notes in a book. You shall pass on to the second test--the tree!")
             tree()
-        elif choice == "N" and second == True:
+        elif choice_tome == "N" and second_tome == True:
             print("Most circumspect! Truly reverential of the ToE. Well, OK. Great. Oh, yes--the next test--the tree!")
             tree()
         else:
@@ -94,48 +92,36 @@ def ocean():
 First off--listen--this last test will not really be that difficult.
 Yes, I realize that the difficulty of these tests has been, perhaps, Less Than Advertised at First (LTAaF).
 But I really don't think you have anything to complain about.
+Especially because, now, as I ask you these questions, you have been transported to the beach and are looking out at a beautiful ocean sunset.
 So for your final question, I'll just ask, point blank, do you think that you are ready to read the ToE?
-Yes 'Y' or no 'N'?
-""")
-#Problem starts here
-    first_yes = False
-    second_yes = False
-
-"""
-There is something happening here that I don't understand.
-I think it must be to do with the way I'm using the first_yes and second_yes vars.
-All I get in the terminal is a neverending prompt.
-None of the printing below happens, and the prompt never ends or goes away.
-"""
+Yes 'Y' or no 'N'?""")
+    first_ocean = False
+    second_ocean = False
 
     while True:
-        choice = input("> ")
+        choice_ocean = input("> ")
 
-    if choice == "Y" and first_yes == False and second_yes == False:
-        print("OK. I hear what you are saying. So, then, you're sure? 'Y' or 'N'.")
-        first_yes = True
-        second_yes = False
-    elif choice == "Y" and first_yes == True and second_yes == False:
-        print("""Good. Yes! Good. Right on. You know, you *are* ready.
-                ...
+# LOL
+# I spent so much time trying to understand why my prompt above kept repeating and repeating and why the code below wouldn't work...
+# The lines below weren't properly indented!!
 
-                ...
-
-                But, I mean, are you sure?
-                'Y' or 'N'.
-                """)
-        first_yes == True
-        second_yes == True
-    elif choice == "Y" and first_yes == True and second_yes == True:
-        print("""I. AM. SO. PROUD. OF. YOU.
-                You really did a great job.
-                The ToE is yours to enjoy.
-                I think you'll find it a great read.
-                Enjoy and bon voyage my friend!
-                """)
-        exit(0)
-    else:
-        end("Aw shucks. You underestimate yourself! Still, no pressure. Try again later.")
+        if choice_ocean == "Y" and first_ocean == False:
+            print("OK. I hear what you are saying. So, then, you're sure? 'Si' or 'No'.")
+            first_ocean = True
+        elif choice_ocean == "N":
+            end("I'm sorry you feel that way!")
+        elif choice_ocean == "Si" and first_ocean == True:
+            print("Good. Yes! Good. Right on. You know, you *are* ready.\n...\n...\nBut, I mean, are you sure?\n'Oui' or 'Non'.")
+            second_ocean = True
+        elif choice_ocean == "No":
+            end("Well, shucks. I won't try and change your mind.")
+        elif choice_ocean == "Oui" and second_ocean == True:
+            print("I. AM. SO. PROUD. OF. YOU.\nYou really did a great job.\nThe ToE is yours to enjoy.\nI think you'll find it a great read.\nEnjoy and bon voyage my friend!")
+            exit(0)
+        elif choice_ocean == "Non":
+            end("Darn. I was hoping you felt ready.")
+        else:
+            end("<ROBOT VOICE>THAT WAS NOT A SPECIFIED OPTION</ROBOT VOICE>")
 
 def end(message):
     print(message, "\nGAME OVER")
