@@ -3,6 +3,3 @@ We're working through [Learn Python 3 the Hard Way](https://alliance-primo.hoste
 ## Naming and storing files
 - There is (or will be) a directory for each exercise in the book.
 - Add your initials or some other distinguishing string to your filenames to avoid overwriting other's work.
-## More resources
-- There are lots...
-- ...including a [forum run by Zed Shaw](https://forum.learncodethehardway.com/)
