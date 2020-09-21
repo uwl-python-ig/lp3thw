@@ -36,7 +36,7 @@ ASCII vertical tab (VT):
 >\v<
 """)
 
-# Well I'll be dad-gummed! You really do use the 'name' of the character!
+# Well I'll be! You really do use the 'name' of the character!
 print("""
 UNICODE!
 \N{LATIN CAPITAL LETTER OI}
@@ -54,5 +54,5 @@ threeThings = "{} {} {}"
 print(threeThings.format("\u1685", "\u1696", "\u1699"))
 
 sail = "\u1684"
-print(f"Ogham's a trip man. Like look at the character sail: {sail}")
+print(f"Ogham--the character sail: {sail}")
 print("Or I could say \N{ogham letter sail}")

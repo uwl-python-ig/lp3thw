@@ -37,8 +37,3 @@ e = "a string with a right side."
 print(w + e)
 
 # string-in-a-string total = 5
-
-# Explain why adding the two strings w and e with + makes a longer string:
-    # As I said, I wouldn't have thought that you could put them together this way.
-    # But to state the obvious, it puts them together, making a longer string.
-    # See plusString.py

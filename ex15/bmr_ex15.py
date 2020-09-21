@@ -3,7 +3,7 @@ from sys import argv
 script, filename = argv
 
 # Okay, so this basically gets the file into memory as I understand it. It doesn't read it out to standard output,
-    # it just 'gets it ready to do stuff'
+    # it just 'gets it ready to do stuff'?
 txt = open(filename)
 
 # Prints the 'a little message' giving the filename

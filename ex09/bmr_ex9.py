@@ -17,7 +17,7 @@ print("Here are the months:", "\n", months)
 
 # Was I right about how it would work to add a newline in the variable value at top?
 print("Here are the months:", monthsInd)
-# It worked! Using the monthsInd var outputs months starting on a newline with no annoying space before 'Jan'
+# It worked! Using the monthsInd var outputs months starting on a newline with no space before 'Jan'
 # So... What does that mean about the way that vars, print function, etc. work??
 
 # The three double-quotes seem a way to print multi-line values (again, is 'values' the right word here?)

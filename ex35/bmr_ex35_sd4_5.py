@@ -8,7 +8,7 @@ def start():
     test_1()
 
 def test_1():
-    print("Okay riddle one, part one: Is it 'okay' to make a good living? Type 'yes' or 'no' please.")
+    print("Okay riddle one, part one: Is it 'okay' eat dinner in front of the television? Type 'yes' or 'no' please.")
 
     while True:
         choice1 = input("> ")

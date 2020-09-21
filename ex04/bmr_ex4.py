@@ -1,11 +1,11 @@
-# These guys are all pretty straightforward.
+# These are all pretty straightforward.
 # See comments below about "How do the types of 'equation' components affect the types of outputs?" I'm still not totally clear on this.
 cars = 100
 space_in_a_car = 4
 drivers = 30
 passengers = 90
 
-# Here we get interesting because we begin using the products of other variables as the values of these variables.
+# We begin using the products of other variables as the values of these variables.
 cars_not_driven = cars - drivers
 cars_driven = drivers
 carpool_capacity = cars_driven * space_in_a_car

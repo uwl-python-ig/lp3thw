@@ -23,5 +23,5 @@ print(f"Okay let's try a little formula: (A+B)/C.")
 result = divide(add(A, B), C)
 print(result)
 
-# Holy crap it worked!
+# It worked!
     # I had to go back and convert my inputs into type integers

@@ -17,8 +17,8 @@ for r in fruits:
     print(f"A fruit of type: {r}")
 
 #ZS writes:
-    # also we can go through mixed lists too
-    # notice we have to use {} since we don't know what's in it
+    # "also we can go through mixed lists too
+    # notice we have to use {} since we don't know what's in it"
     # I don't get it. We have to use curly brackets because we don't know the datatype of list items?
 
 for x in change:

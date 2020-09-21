@@ -13,7 +13,6 @@ def to_limit(i, limit, inc):
         numbers.append(i)
         print(f"Current contents of list 'numbers':\n{numbers}.")
         # Interesting that I don't have to convert inc to a string to print--
-        # I probably learned why this is a while back and forgot
         print(f"Incrementing 'i' value {i} by value of var 'inc', which is {inc}, to make {i+inc}")
         i += inc
         print(f"Current 'i' value {i}")

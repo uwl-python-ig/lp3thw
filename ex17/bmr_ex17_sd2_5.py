@@ -10,10 +10,10 @@ print(f"Copying from {from_file} to {to_file}")
 in_file = open(from_file) ; indata = in_file.read()
 
 # What about using the Python 'with' statement and indent?
-    # Alexis suggests something along the lines of:
+    # Something along the lines of:
     # `with open()
     #   do stuff here`
-    # But I don't really know what it means
+    # Was suggested, but I don't really know what it means
 
 print(f"""
     Some information:

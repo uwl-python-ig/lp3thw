@@ -9,7 +9,7 @@ print(f"Copying from {from_file} to {to_file}")
 in_file = open(from_file)
 indata = in_file.read()
 
-# I learned: New lines in the multi-line string AND \n will give me two new lines (I only wanted one)
+# New lines in the multi-line string AND \n will give me two new lines (I only wanted one)
 print(f"""
     Some information:\n
     The input file is {len(indata)} bytes long\n

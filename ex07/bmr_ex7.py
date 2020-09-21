@@ -27,7 +27,7 @@ end11 = "e"
 end12 = "r"
 
 # Watch end = ' ' at the end. Try removing it to see what happens.
-# Okay so when I remove it, the following line of code (beginning with end7) prints on a new line,
+# When I remove it, the following line of code (beginning with end7) prints on a new line,
 # as opposed to on the same line after the space in end=''.
 # What I don't understand is what is it that makes the next line of code continue printing on the same line?
 # As best I can see, all end= ' ' should do is insert a space

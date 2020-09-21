@@ -11,9 +11,9 @@ print(f"We're going to erase {filename}.")
 print("If you don't want that, hit CTRL-C (^C).")
 print("If you do want that, hit RETURN.")
 
-# Now this is a little tricksy. If CTRL+C is entered, the script stops due to something that I believe was called
+# Now this is a little tricky. If CTRL+C is entered, the script stops due to something called
     # a 'keyboard interrupt' in the error message
-    # But the tricsy thing is that, really, would *any other* input allow the script to continue?
+    # But the tricky thing is that, really, would *any other* input allow the script to continue?
     # I mean, it doesn't necessarily have to be only RETURN, right?
     # Just any input that doesn't stop the script. I'm going to try a random alpha-numeric input and see.
         # Yes. Random alpha-numeric allowed the script to continue
@@ -23,7 +23,7 @@ input("?")
 print("Opening the file...")
 target = open(filename, 'w')
 
-# Truncating the file--which it turns out, in computer-speak, means to ERASE that sonofagun
+# Truncating the file--which means to ERASE
 print("Truncating the file. Goodbye!")
 target.truncate()
 

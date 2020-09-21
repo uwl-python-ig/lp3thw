@@ -8,7 +8,7 @@ from sys import argv
 script, input_file = argv
 
 # SEE docs.python.org for V3.6 > 7.2.1. Methods of File Objects <https://docs.python.org/3.6/tutorial/inputoutput.html#methods-of-file-objects>
-# * WHAT IS F??? Seems that it is shorthand for "file"--but would a letter other than f work?? I believe that it would.
+# * WHAT IS F? Seems that it is shorthand for "file"--but would a letter other than f work?? I believe that it would.
 
 # We define a function called "print_all" with one argument, "f"*
     # I CHANGED THE Fs TO Xs because I wanted to know whether somehow the var name "f" was set...somewhere else, or whether it could be any name.

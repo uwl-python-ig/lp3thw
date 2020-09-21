@@ -41,7 +41,7 @@ def bear_room():
         elif choice == "open door" and bear_moved:
             gold_room()
         elif choice == "taunt bear" and bear_moved:
-            dead("The bear gets pissed off and chews your leg off.")
+            dead("The bear gets angry and chews your leg off.")
         elif choice == "something else" and bear_moved:
             print("Well, you blew it. The bear is back in front of the door now.")
             bear_moved = False

@@ -24,7 +24,7 @@ input("?")
 print("Opening the file...")
 target = open(filename, 'w')
 
-# Truncating the file--which it turns out, in computer-speak, means to ERASE that sonofagun
+# Truncating the file means to ERASE the file
 print("Truncating the file. Goodbye!")
 target.truncate()
 

@@ -6,5 +6,5 @@ print("The two:", two)
 print("The three:", three)
 print("The more:", more)
 print("The zero:", zero)
-# This is truly interesting. Can the order of lines 2 and three be switched?
+# This is interesting. Can the order of lines 2 and three be switched?
 # Yes they can

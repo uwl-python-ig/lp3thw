@@ -8,13 +8,13 @@ formatter = "{} {} {} {}"
 print(formatter.format(1, 2, 3, 4))
 print(formatter.format("one", "two", "three", "four"))
 print(formatter.format(True, False, False, True))
-# Okay I'll tell you right now that *this line of code is the most interesting one to me*
+# This line of code is the most interesting one to me
 print(formatter.format(formatter, formatter, formatter, formatter))
 print(formatter.format(
     "Try your",
     "Own text here",
     "Maybe a poem",
-    "Or a song about fear"
+    "Or a song"
 ))
 # Here's my own text
 # Note that I added '\n' to the end of the first three lines to get four strings on four lines,

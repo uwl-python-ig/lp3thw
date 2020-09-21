@@ -5,7 +5,7 @@ def word_meld(w1, w2):
     print("This function melds words together!")
     print(f"Prepare to see an entirely new word created from two inputs, '{w1}' and '{w2}'.")
     print(f"Here it is!\n{w2}{w1}")
-    print("I hope you weren't too hung up on the order of the words you provided, man. Too bad.")
+    print("I hope you weren't too hung up on the order of the words you provided. Too bad.")
 # Method 1: Integers
 print("I wanna see first if this will work with integers.\nLet's call this 'number-word'.")
 word_meld(5, 7)
