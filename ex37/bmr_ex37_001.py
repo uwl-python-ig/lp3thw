@@ -10,6 +10,7 @@ from sys import exit as bye
 """
 INTERESTING:
 All functions to be called must be defined prior to call?
+But no...see second_input below...
 """
 
 def multiply(c, d):
@@ -38,8 +39,7 @@ def multiply_input():
 def start():
     print("""OK just need you to enter a couple of words.
 Please follow the directions...
-...or enter 'skip' at the first prompt to move on to the next section.
-""")
+...or enter 'skip' at the first prompt to move on to the next section.""")
     a = input("Please type 'a couple' and then hit enter: ")
     if a == "skip":
         multiply_input()
