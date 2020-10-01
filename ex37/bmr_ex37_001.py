@@ -1,5 +1,5 @@
 
-# Attempting to use all of the keywords from the list...
+# Keywords from the list:
     # and
     # as (in one usage)
     # try (still fuzzy)
