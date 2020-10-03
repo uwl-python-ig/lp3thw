@@ -1,5 +1,6 @@
 
 # Keywords from the list:
+    # print
     # and
     # as (in one usage)
     # try (still fuzzy)
@@ -20,14 +21,16 @@ def multiply(c, d):
         print("You needed to enter integers, not strings or decimals or whatever other kind of non-compatible values you may have entered.")
         return None
         multiply_input()
-        # Note that the following except does not get used, no matter whether strings or decimals are entered...
+        """
+        # Note that the following `except` did not get used, no matter whether strings or decimals were entered...
+        # Only the first except was ever used in tests
         # Also, returning to multiply_input doesn't work...
         # Must be because exit is at the end of the try block???
     except TypeError as te:
-        # This doesn't seem to get used, regardless of input I've tried so far.
         print("You needed to enter ingegers, not decimals or whatever other kind of numbers you may have just entered.")
         return None
         multiply_input()
+        """
     return value
     bye(0)
 

@@ -1,3 +1,12 @@
 
-hey here's the text--I'm appending it, because I passed 'write' the 'a' param
-hey here's the text--I'm appending it, because I passed 'write' the 'a' param
+here is the first poem
+a poem of five lines
+nary a word shall be capitalized!
+and you can believe that
+i don't care for capitalization just now
+
+
+just a second poem
+to make sure it works
+
+
