@@ -2,6 +2,7 @@
 # Keywords from the list:
     # print
     # and
+    # def
     # as (in one usage)
     # try (still fuzzy)
     # except (still fuzzy)
@@ -27,7 +28,7 @@ def multiply(c, d):
         # Also, returning to multiply_input doesn't work...
         # Must be because exit is at the end of the try block???
     except TypeError as te:
-        print("You needed to enter ingegers, not decimals or whatever other kind of numbers you may have just entered.")
+        print("You needed to enter integers, not decimals or whatever other kind of numbers you may have just entered.")
         return None
         multiply_input()
         """
