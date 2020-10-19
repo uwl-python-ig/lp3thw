@@ -10,4 +10,4 @@ Another study-on-your own exercise. Here are some resources that may be helpful:
 * [Python while Loop](https://www.programiz.com/python-programming/while-loop)
 * [The with statement](https://docs.python.org/3.6/reference/compound_stmts.html#the-with-statement) from [The Python Language Reference](https://docs.python.org/3.6/reference/index.html) > [Compound statements](https://docs.python.org/3.6/reference/compound_stmts.html#compound-statements): *Many of the other keywords from ex37's list are here as well,*
 ## Reading Code
-* BMR is planning to look at Samuel Meuli's [wikibase-api](https://github.com/samuelmeuli/wikibase-api) and [python-wikibase](https://github.com/samuelmeuli/python-wikibase)
+* BMR is looking at Samuel Meuli's [python-wikibase](https://github.com/samuelmeuli/python-wikibase) and [wikibase-api](https://github.com/samuelmeuli/wikibase-api)
