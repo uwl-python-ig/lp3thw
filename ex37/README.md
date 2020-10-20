@@ -10,8 +10,7 @@ Another study-on-your own exercise. Here are some resources that may be helpful:
 * [Python while Loop](https://www.programiz.com/python-programming/while-loop)
 * [The with statement](https://docs.python.org/3.6/reference/compound_stmts.html#the-with-statement) from [The Python Language Reference](https://docs.python.org/3.6/reference/index.html) > [Compound statements](https://docs.python.org/3.6/reference/compound_stmts.html#compound-statements): *Many of the other keywords from ex37's list are here as well,*
 ## Reading Code
-* Looking for some code to read (BMR):
+* Ideas for code to read (BMR):
    * Samuel Meuli's [python-wikibase](https://github.com/samuelmeuli/python-wikibase) and [wikibase-api](https://github.com/samuelmeuli/wikibase-api)
-   * uwlib-cams > rml > [rml.py](https://github.com/uwlib-cams/rml/blob/master/rml.py)
-    
-   
+   * uwlib-cams > [rml](https://github.com/uwlib-cams/rml)
+   * [csv2shex](https://github.com/tombaker/csv2shex): Generate ShEx schemas from application profiles in CSV.
