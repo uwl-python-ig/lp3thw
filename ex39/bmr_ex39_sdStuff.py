@@ -1,9 +1,7 @@
 rule = '-' * 20
 
+# Let's create the dictionary on the command line;
 
-# For when I want to make the list as I go:
-    # Let's create the dictionary on the command line;
-    # I don't want to do states/cities so I'll do food/ingredient
 wfl = {}
 for n in range(0,3):
     word = input("Enter a word: ")
@@ -30,10 +28,6 @@ letter = wfl.get(test, "That word isn't in the dictionary.")
 print(letter)
 
 print(rule)
-
-# -----
-# Q/To-do: Could I retrieve the key for a given value?
-# ----
 
 # Create a related list
 wll = {}
@@ -66,6 +60,8 @@ print(f"print wll.values(): -->", wll.values(), "<--")
 print("Now let's see if I can get keys from values.")
 
 ll = input("Enter the last letter of a word in the dictionaries:")
+
 # This actually works! Do I *fully* understand this...?...?
     # Interesting to note, with multiple matches, the first matching key is used
+
 print(list(wll.keys())[list(wll.values()).index(ll)])
