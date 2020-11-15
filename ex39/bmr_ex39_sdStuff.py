@@ -1,86 +1,71 @@
 rule = '-' * 20
 
-fi = {}
 
-"""
 # For when I want to make the list as I go:
     # Let's create the dictionary on the command line;
     # I don't want to do states/cities so I'll do food/ingredient
-
-for n in range(0,5):
-    food = input("Enter a food you like: ")
-    ingredient = input("Enter an ingredient in that food: ")
-    fi[food] = ingredient
-"""
-# For when I don't:
-
-fi = {
-'sushi': 'rice',
-'nachos': 'cheese',
-'pizza': 'sauce',
-'burgers': 'buns',
-'sammies': 'bread',
-'oatmeal': 'oats'
-}
-
-print("From the dictionary you created:", "\n", rule)
-for f, i in list(fi.items()):
-    print(f"{f} has/have {i} in it/them.")
+wfl = {}
+for n in range(0,3):
+    word = input("Enter a word: ")
+    firstLetter = input("Enter the first letter (lowercase) in that word: ")
+    # Below I use a "subscript operator" to add a key/value:
+        # dict_name[key_name] = key_value
+    wfl[word] = firstLetter
 
 print(rule)
 
-"""
-# For retrieving values:
-
-test = input("Enter the name of a food, and I'll give you an ingredient in it: ")
-ingredient = fi.get(test, "Oh, dang, sorry. That food isn't on my list.")
-print(ingredient)
+print("Here's the dictionary you created:")
+# Below I use the items() method to retrieve the key and corresponding value at the same time
+    # See https://docs.python.org/3.6/tutorial/datastructures.html#looping-techniques
+for key, value in list(wfl.items()):
+    print(f"{key}: {value}")
 
 print(rule)
-"""
 
-print("""OK, let's make another dictionary.
-This one will provide names in Japanese for the foods you listed earlier.""")
+# Retrieving values for a given key
 
-fej = {}
-"""
-# For creating the dict in the CLI:
+test = input("Enter a word in the dictionary, and I'll return the letter it starts with: ")
+# "The method get() returns a value for the given key. If key is not available then returns default method None."
+letter = wfl.get(test, "That word isn't in the dictionary.")
+print(letter)
 
-for f, i in list(fi.items()):
-    print(f"Here's a food in English: {f}.")
-    jpn = input(f"Enter the Japanese word for {f}: ")
-    fej[f] = jpn
-"""
-# For my purposes trying to code below, I'll make it ahead of time:
+print(rule)
 
-fej = {
-'sushi': '寿司',
-'nachos': 'ナチョス',
-'pizza': 'ピザ',
-'burgers': 'ハンバーガー',
-'sammies': 'サンドイッチ',
-'oatmeal': 'オーツミール',
-}
+# -----
+# Q/To-do: Could I retrieve the key for a given value?
+# ----
 
-for eng, jpn in list(fej.items()):
-    print(f"English: {eng}")
-    print(f"Japanese: {jpn}")
+# Create a related list
+wll = {}
+for key, value in list(wfl.items()):
+    print(f"Here's a word in the dictionary you created: {key}.")
+    ll = input(f"Enter the last letter in that word: ")
+    wll[key] = ll
 
-"""
-# This does not work
-    # The following may be a place to start:
-    # https://www.programiz.com/python-programming/methods/dictionary/items
+print(rule)
 
-print("OK, now we can list foods in English and Japanese, and ingredients in English:")
+print("Here's your second dictionary:")
+for key, value in list(wll.items()):
+    print(f"{key}: {value}")
 
-for f, i in list(fi.items()):
-    print(f"The food {f}, in Japanese, is", fej[fi[f]])
+print(rule)
 
-# Traceback (most recent call last):
-#  File "bmr_ex39_sdStuff.py", line 53, in <module>
-#    print(f"The food {f}, in Japanese, is", fej[fi[f]])
-# KeyError: 'rice'
-"""
+print("Let's see here... Can I list as word / first letter / last letter?")
 
-# I'd still like to try something with one key, multiple values
-    # 'food': ['ingred1', 'ingred2', 'ingred3']
+for key, value in list(wfl.items()):
+    print(f"{key} / {value} / {wll[key]}")
+
+print("Yes, that worked.")
+
+print(rule)
+
+print("Some review on dictionary methods. We'll use the second dictionary for this.")
+print(f"print wll.keys(): -->", wll.keys(), "<--")
+print(f"print wll.values(): -->", wll.values(), "<--")
+
+print("Now let's see if I can get keys from values.")
+
+ll = input("Enter the last letter of a word in the dictionaries:")
+# This actually works! Do I *fully* understand this...?...?
+    # Interesting to note, with multiple matches, the first matching key is used
+print(list(wll.keys())[list(wll.values()).index(ll)])
