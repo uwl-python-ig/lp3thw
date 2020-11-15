@@ -65,3 +65,6 @@ ll = input("Enter the last letter of a word in the dictionaries:")
     # Interesting to note, with multiple matches, the first matching key is used
 
 print(list(wll.keys())[list(wll.values()).index(ll)])
+
+# I also read briefly about ordered dict here:
+    # https://docs.python.org/3.6/library/collections.html#collections.OrderedDict
