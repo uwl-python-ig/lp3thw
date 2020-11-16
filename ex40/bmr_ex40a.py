@@ -19,3 +19,14 @@ print("Now we'll use the var in bmr_ex40_mystuff.py")
 print(bmr_ex40_mystuff.tangerine)
 
 print(rule)
+
+print("So to sum up:")
+print("Get apple from the dict:\n", mystuff['apple']) # A ha! The key is a string, so it needs to be in quotes
+print("Get apple from the module:")
+bmr_ex40_mystuff.apple() # Syntax: parens needed after apple because it's a function
+print("Get a var from the module:")
+print(bmr_ex40_mystuff.tangerine) # Syntax: no parens needed after tangerine because it's just a variable
+
+    # Also, printing seems to work a little differently for functions and vars from the module?
+    # When I put the apple function inside the print function's parens something funny happened...
+    # When I tried using module.var outside of the print function nothing happened
