@@ -16,6 +16,7 @@ bmr_ex40_mystuff.apple()
 print(rule)
 
 print("Now we'll use the var in bmr_ex40_mystuff.py")
+# THE DOT (.) SYNTAX!
 print(bmr_ex40_mystuff.tangerine)
 
 print(rule)
@@ -28,5 +29,8 @@ print("Get a var from the module:")
 print(bmr_ex40_mystuff.tangerine) # Syntax: no parens needed after tangerine because it's just a variable
 
     # Also, printing seems to work a little differently for functions and vars from the module?
-    # When I put the apple function inside the print function's parens something funny happened...
-    # When I tried using module.var outside of the print function nothing happened
+    # When I put the apple function inside the print function's parens... Where is the None coming from?
+
+        # >>> print(bmr_ex40_mystuff.apple())
+        # I AM APPLES!
+        # None
