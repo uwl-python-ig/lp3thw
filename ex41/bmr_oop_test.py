@@ -5,6 +5,7 @@ import sys
 WORD_URL = "http://learncodethehardway.org/words.txt"
 WORDS = []
 
+# BMR1
 # OK this is a dictionary
 PHRASES = {
     "class %%%(%%%):":
@@ -22,7 +23,9 @@ PHRASES = {
 }
 
 # ZS: do they want to drill phrases first
-# IF there are two args given in the CLI and the second (the one at position '1' is 'english,' set the PHRASE_FIRST var to boolean true)
+# BMR2
+# IF there are two args given in the CLI and the second (the one at position '1' is 'english,'
+    # set the PHRASE_FIRST var to boolean true)
 if len(sys.argv) == 2 and sys.argv[1] == "english":
     PHRASE_FIRST = True
 else:
@@ -30,6 +33,7 @@ else:
     PHRASE_FIRST = False
 
 # ZS: load up the words from the website
+# BMR3
 # OK here we are doing some stuff--
 # use the readlines() method on the data which is retrieved using the urlopen method from urllib.request
 for word in urlopen(WORD_URL).readlines():
@@ -41,6 +45,7 @@ for word in urlopen(WORD_URL).readlines():
 def convert(snippet, phrase):
 # There's lots here so I'll comment on chunks individually...
 
+    # BMR4
     # set var class_names
         # var class_names is a list, made up of
             # a *certain number of* items (w) in WORDS
@@ -54,13 +59,24 @@ def convert(snippet, phrase):
                 # population: first arg, this is WORDS, I get this
                 # length of list of elements chosen from population sequence or set: second arg, I don't get this,
                     # because I don't understand exactly what the var snippet is at this point...
-
+                    # OK I'll look for where snippet gets set...
     class_names = [w.capitalize() for w in
                     random.sample(WORDS, snippet.count("%%%"))]
+
+    # BMR7
+    # Setting the values of some other vars here...
+        # other_names
+            # as for class_names, use the random libs sample function
+            # cont the number of '***' in value of var snippet, that is,
+                # in a key taken from the PHRASES dict above
+            # [?] Why doesn't the value of other_names need to be set as a list??
     other_names = random.sample(WORDS, snippet.count("***"))
+    # BMR8
+    # Set results var to a list, set param_names var to a list
     results = []
     param_names = []
 
+    # 
     for i in range(0, snippet.count("@@@")):
         param_count = random.randint(1,3)
         param_names.append(', '.join(
@@ -87,12 +103,28 @@ def convert(snippet, phrase):
     return results
 
 
-# keep going until they hit CTRL-D
+# ZS: keep going until they hit CTRL-D
+# So essentially an infinite loop; have we seen the use of try up to now?
 try:
     while True:
+        # BMR5
+        # set snippetS to the keys in the PHRASES dict
+        # [?] BUT why list()??
+        # ANSWER: list() returns a list
+        # See https://www.programiz.com/python-programming/methods/built-in/list
+            # the list takes a single argument, which is an iterable
+            # here we create an iterable using the keys() method for dictionaries
+            # See https://www.programiz.com/python-programming/methods/dictionary/keys
         snippets = list(PHRASES.keys())
+        # OK but this line seems funny to me...
+            # This line further acts on the snippets var (shuffles it)
+            # So now the order of the list items has been changed
         random.shuffle(snippets)
 
+        # BMR6
+        # now to set snippeT
+        # OK so snippetS is a list, so for each item (snippet) in the list,
+            # set var phrase to the value corresponding with each key!
         for snippet in snippets:
             phrase = PHRASES[snippet]
             question, answer = convert(snippet, phrase)
