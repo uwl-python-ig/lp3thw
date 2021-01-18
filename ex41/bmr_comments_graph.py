@@ -272,6 +272,7 @@ class Graph(Node):
     # 1: The name of this class is Graph, and it is an instance of Node
         # But where to do find "what other classes it inherits from"? (Reading More Code, question 2)
     # 2: "every function it has an the parameters they take":
+    # [INCOMPLETE LIST]
         # __get_store(): param = self
         # __get_identifier: param = self
         # __get_namespace_manager: params = self, nm
