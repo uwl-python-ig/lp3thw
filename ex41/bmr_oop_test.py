@@ -76,7 +76,7 @@ def convert(snippet, phrase):
     results = []
     param_names = []
 
-    # 
+    # BMR9 stopping commenting here ...
     for i in range(0, snippet.count("@@@")):
         param_count = random.randint(1,3)
         param_names.append(', '.join(
@@ -109,12 +109,11 @@ try:
     while True:
         # BMR5
         # set snippetS to the keys in the PHRASES dict
-        # [?] BUT why list()??
-        # ANSWER: list() returns a list
-        # See https://www.programiz.com/python-programming/methods/built-in/list
-            # the list takes a single argument, which is an iterable
-            # here we create an iterable using the keys() method for dictionaries
-            # See https://www.programiz.com/python-programming/methods/dictionary/keys
+            # [?] BUT why list()??--because the list() constructor returns a list. That list will the the keys() from the PHRASES dictionary
+            # See https://www.programiz.com/python-programming/methods/built-in/list
+                # the list takes a single argument, which is an iterable
+                # here we create an iterable using the keys() method for dictionaries
+                # See https://www.programiz.com/python-programming/methods/dictionary/keys
         snippets = list(PHRASES.keys())
         # OK but this line seems funny to me...
             # This line further acts on the snippets var (shuffles it)
@@ -124,9 +123,13 @@ try:
         # BMR6
         # now to set snippeT
         # OK so snippetS is a list, so for each item (snippet) in the list,
-            # set var phrase to the value corresponding with each key!
+            # set var phrase to the value corresponding with each key
         for snippet in snippets:
             phrase = PHRASES[snippet]
+            # So at this point we have snippet = the keys from the PHRASES dict, and phrase = the values
+
+            # Can't find documentation for convert()
+                # I'm guessing that it assigns var question as snippet and var answer as phrase...
             question, answer = convert(snippet, phrase)
             if PHRASE_FIRST:
                 question, answer = answer, question
