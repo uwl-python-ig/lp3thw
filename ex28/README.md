@@ -1,4 +1,4 @@
-# Exercise 28
+# BMR notes
 Is one of those exercises that doesn't involve writing a script, it just requires you to use the Python interpreter to evaluate a bunch of Boolean expressions, like this...
 ```
 $ python3

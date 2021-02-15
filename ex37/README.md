@@ -1,5 +1,5 @@
-# EXERCISE 37
-Another study-on-your own exercise. Here are some resources that may be helpful:
+# BMR notes
+Another study-on-your own exercise (sigh). Here are some resources that I found helpful:
 * Programiz > Python Programming > [List of Keywords in Python](https://www.programiz.com/python-programming/keyword-list)
 * Real Python > [Python Keywords: An Introduction](https://realpython.com/python-keywords/)
 * \[Add any handy resources here later for the other categories in the exercises--data types, string escape sequences, "old style string formats," and operators\]
