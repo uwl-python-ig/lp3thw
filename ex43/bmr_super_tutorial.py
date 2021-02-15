@@ -51,3 +51,6 @@ class Cube(Square):
     def volume(self):
         face_area = super().area()
         return face_area * self.length
+
+# Pick up at:
+    # https://realpython.com/python-super/#a-super-deep-dive
