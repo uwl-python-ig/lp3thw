@@ -13,6 +13,10 @@ class Rectangle(object):
         return self.length * self.width
 
     def perimeter(self):
+        # Just noted that I would have entered this as return 2 * self.length + self.width
+        # That wouldn't work...
+            # >>> 2 * 2 + 2
+            # 6
         return 2 * self.length + 2 * self.width
 
 """
@@ -30,7 +34,9 @@ class Square(object):
 
 """
 
+"""
 # Now use inheritance
+# Examples below call super() with no params, see farther down for calling it *with* params
 
 class Square(Rectangle):
     def __init__(self, length):
@@ -51,6 +57,65 @@ class Cube(Square):
     def volume(self):
         face_area = super().area()
         return face_area * self.length
+"""
+# A ha! Now we are getting to the way that super() is called in LP3THW--with params:
+    # "super() can also take two parameters: the first is the subclass, and the second parameter is an object that is an instance of that subclass."
 
-# Pick up at:
-    # https://realpython.com/python-super/#a-super-deep-dive
+class Square(Rectangle):
+    def __init__(self, length):
+        super(Square, self).__init__(length, length)
+
+class Cube(Square):
+
+    def surface_area(self):
+        face_area = super(Square, self).area()
+        return face_area * 6
+
+    def volume(self):
+        face_area = super(Square, self).area()
+        return face_area * self.length
+
+# "In this example, you are setting Square as the subclass argument to super(), instead of Cube.
+# This causes super() to start searching for a matching method (in this case, .area()) at one level above Square in the instance hierarchy, in this case Rectangle.
+# In this specific example, the behavior doesn’t change. But imagine that Square also implemented an .area() function that you wanted to make sure Cube did not use.
+# Calling super() in this way allows you to do that."
+
+# OK...but this is confusing to me...A ha!
+    # "The parameterless call to super() is recommended and sufficient for most use cases,
+    # and needing to change the search hierarchy regularly could be indicative of a larger design issue."
+
+# But also:
+    # "By including an instantiated object, super() returns a bound method: a method that is bound to the object, which gives the method the object’s context such as any instance attributes.
+    # If this parameter is not included, the method returned is just a function, unassociated with an object’s context."
+
+# MULTIPLE INHERITANCE STUFF
+
+class Triangle(object):
+
+    def __init__(self, base, height):
+        self.base = base
+        self.height = height
+
+    def area(self):
+        return 0.5 * self.base * self.height
+
+class RightPyramid(Square, Triangle):
+    def __init__(self, base, slant_height):
+        self.base = base
+        self.slant_height = slant_height
+        super().__init__(self.base)
+
+    def area(self):
+        base_area = super().area()
+        perimeter = super().perimeter()
+        return 0.5 * perimeter * self.slant_height + base_area
+"""
+    TEST
+        >>> from bmr_super_tutorial import *
+        >>> pyramid = RightPyramid(2, 4)
+        >>> RightPyramid.__mro__
+        (<class 'bmr_super_tutorial.RightPyramid'>, <class 'bmr_super_tutorial.Square'>, <class 'bmr_super_tutorial.Rectangle'>, <class 'bmr_super_tutorial.Triangle'>, <class 'object'>)
+        >>> pyramid.area()
+        20.0
+"""
+# TAKEAWAY: I'm not ready for multiple inheritance
