@@ -5,7 +5,7 @@ import sys
 WORD_URL = "http://learncodethehardway.org/words.txt"
 WORDS = []
 
-# BMR1
+# BMR01
 # OK this is a dictionary
 PHRASES = {
     "class %%%(%%%):":
@@ -23,7 +23,7 @@ PHRASES = {
 }
 
 # ZS: do they want to drill phrases first
-# BMR2
+# BMR02
 # IF there are two args given in the CLI and the second (the one at position '1' is 'english,'
     # set the PHRASE_FIRST var to boolean true)
 if len(sys.argv) == 2 and sys.argv[1] == "english":
@@ -33,19 +33,22 @@ else:
     PHRASE_FIRST = False
 
 # ZS: load up the words from the website
-# BMR3
+# BMR03
 # OK here we are doing some stuff--
 # use the readlines() method on the data which is retrieved using the urlopen method from urllib.request
 for word in urlopen(WORD_URL).readlines():
+    # use urlopen() https://docs.python.org/3.6/library/urllib.request.html#urllib.request.urlopen to
+        # "Open the URL [...], which can be either a string or a Request object"
     # readlines returns a list, and we've said above that WORDS is a list, so for each list item that readlines() gives us,
     # append to the WORDS list, as a string in utf-8 encoding (str()), after stripping leading and trailing whitespace (strip())
     WORDS.append(str(word.strip(), encoding="utf-8"))
 
+# BMR04
 # define function 'convert' with arts 'snippet' and 'phrase'
 def convert(snippet, phrase):
 # There's lots here so I'll comment on chunks individually...
 
-    # BMR4
+    # BMR05
     # set var class_names
         # var class_names is a list, made up of
             # a *certain number of* items (w) in WORDS
@@ -57,28 +60,34 @@ def convert(snippet, phrase):
             # [?] what does the 'for' do here? Why not just w.capitalize in random.sample...?
             # Args for the sample method (https://docs.python.org/3.6/library/random.html#random.sample) include:
                 # population: first arg, this is WORDS, I get this
-                # length of list of elements chosen from population sequence or set: second arg, I don't get this,
-                    # because I don't understand exactly what the var snippet is at this point...
-                    # OK I'll look for where snippet gets set...
+                # K: second arg, length of list of elements chosen from population
+                    # where is snippet set?
     class_names = [w.capitalize() for w in
                     random.sample(WORDS, snippet.count("%%%"))]
 
-    # BMR7
+    # BMR08
     # Setting the values of some other vars here...
         # other_names
             # as for class_names, use the random libs sample function
             # cont the number of '***' in value of var snippet, that is,
                 # in a key taken from the PHRASES dict above
-            # [?] Why doesn't the value of other_names need to be set as a list??
+            # [?][?] Why doesn't the value of other_names need to be set as a list??
     other_names = random.sample(WORDS, snippet.count("***"))
-    # BMR8
+    # BMR09
     # Set results var to a list, set param_names var to a list
     results = []
     param_names = []
 
-    # BMR9 stopping commenting here ...
+    # BMR10
+    # For each number in the range()
+    # (which is actually not a function, but is rather an "immutable sequence type")
+    # between 0 and the number of '@@@'s in the current snippet (that is, the current key from PHRASES above)
+        # https://docs.python.org/3.6/library/functions.html#func-range
     for i in range(0, snippet.count("@@@")):
+        # set param count as a random number between 1 and 3
         param_count = random.randint(1,3)
+        # append some values to the param_names list, but there is more happening in the append() call
+            # STOPPED HERE 2021-03-04
         param_names.append(', '.join(
             random.sample(WORDS, param_count)))
 
@@ -107,29 +116,32 @@ def convert(snippet, phrase):
 # So essentially an infinite loop; have we seen the use of try up to now?
 try:
     while True:
-        # BMR5
+        # BMR06
         # set snippetS to the keys in the PHRASES dict
-            # [?] BUT why list()??--because the list() constructor returns a list. That list will the the keys() from the PHRASES dictionary
-            # See https://www.programiz.com/python-programming/methods/built-in/list
+            # [?] BUT why list()??--because the list() constructor returns a list.
+                # That list will the the keys() from the PHRASES dictionary
+                    # See https://www.programiz.com/python-programming/methods/built-in/list
                 # the list takes a single argument, which is an iterable
                 # here we create an iterable using the keys() method for dictionaries
-                # See https://www.programiz.com/python-programming/methods/dictionary/keys
+                    # https://www.programiz.com/python-programming/methods/dictionary/keys
         snippets = list(PHRASES.keys())
         # OK but this line seems funny to me...
             # This line further acts on the snippets var (shuffles it)
             # So now the order of the list items has been changed
         random.shuffle(snippets)
 
-        # BMR6
-        # now to set snippeT
-        # OK so snippetS is a list, so for each item (snippet) in the list,
-            # set var phrase to the value corresponding with each key
+        # BMR07
+        # now to set snippets and snippet
+        # Just above we see that snippets is a list of the keys in PHRASES;
+        # for each item (snippet) in the list,
         for snippet in snippets:
+            # set var phrase to the value corresponding with each key in PHRASES
             phrase = PHRASES[snippet]
-            # So at this point we have snippet = the keys from the PHRASES dict, and phrase = the values
+            # snippet = key; phrase = value
 
-            # Can't find documentation for convert()
-                # I'm guessing that it assigns var question as snippet and var answer as phrase...
+            # [!] CANNOT find documentation for convert()
+                # Seriously, what is this??
+                # I'm **assuming** that it assigns the value of snippet to question, and the value of phrase to answer...
             question, answer = convert(snippet, phrase)
             if PHRASE_FIRST:
                 question, answer = answer, question
@@ -138,5 +150,6 @@ try:
 
             input("> ")
             print(f"ANSWER: {answer}\n\n")
+
 except EOFError:
     print("\nBye")
