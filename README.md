@@ -1,4 +1,7 @@
 # lp3thw
+
+[![hackmd-github-sync-badge](https://hackmd.io/z49cQi0qTeKgCL9vxjdlog/badge)](https://hackmd.io/z49cQi0qTeKgCL9vxjdlog)
+
 Some [PIG](https://github.com/uw-libraries-python-interest-group) members are working through [Learn Python 3 the Hard Way](https://alliance-primo.hosted.exlibrisgroup.com/permalink/f/l9c4fq/CP71290856150001451) and sharing work here.
 ## Naming and sharing files
 - There is (or will be) a directory for each exercise in the book; store your files for a given exercise in a corresponding directory
@@ -10,3 +13,5 @@ Some [PIG](https://github.com/uw-libraries-python-interest-group) members are wo
 - Share your solutions to the exercises and study drills, especially if you've commented on your code, tried doing things a bit differently, or written some other code to help make sense of things
 - Did you take notes on an exercise? Create a README file in the directory for that exercise to share them, or add your notes to an existing README (like [this one](https://github.com/uw-libraries-python-interest-group/lp3thw/blob/master/ex37/README.md), for example)
 - Stumped? Create [an issue](https://github.com/uw-libraries-python-interest-group/lp3thw/issues); someone might be able to help, or you may just be able to remember to come back to the place you got stuck later
+
+###### tags: `UWL-PIG`
