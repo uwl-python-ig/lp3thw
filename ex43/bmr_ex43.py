@@ -5,10 +5,16 @@ class Scene(object):
     def enter(self):
         pass
 
-# class Engine *was* here--does it need to be here??
+class Engine(object):
+
+    def __init__(self, scene_map):
+        # what does the scene param do??
+        pass
+
+    def play(self):
+        pass
 
 # Child classes Death, CentralCorridor, LaserWeaponArmory, TheBridge, EscapePod
-
 class Death(Scene):
 
     def enter(self):
@@ -17,10 +23,7 @@ class Death(Scene):
 class CentralCorridor(Scene):
 
     def enter(self):
-        # Test
-        print("You find yourself in the central corridor of this spaceship...")
-        # Ah... of course this string is not returned yet
-        # This is because class Engine has not been defined yet!
+        pass
 
 class LaserWeaponArmory(Scene):
 
@@ -37,42 +40,17 @@ class EscapePod(Scene):
     def enter(self):
         pass
 
-class Engine(object):
-
-    def __init__(self, scene_map):
-        pass
-
-    def play(self):
-        pass
-
 class Map(object):
-    # Map questions:
-    # I don't understand why the Map class needs a start_scene attribute as well as an opening_scene method
-
-    # NOTE001
-    # ALRIGHT I'm going to cheat a bit and grab the "answer" for class Map as a way to get started
-
-    scenes = {
-        'central_corridor': CentralCorridor(),
-        'laser_weapon_armory': LaserWeaponArmory(),
-        'the_bridge': TheBridge(),
-        'escape_pod': EscapePod(),
-        'death': Death(),
-        # still need to define finished
-        # 'finished': Finished(),
-
-    }
 
     def __init__(self, start_scene):
-        self.start_scene = start_scene
+        pass
 
     def next_scene(self, scene_name):
-        val = Map.scenes.get(scene_name)
-        return val
+        pass
 
     def opening_scene(self):
-        return self.next_scene(self.start_scene)
+        pass
 
 a_map = Map('central_corridor')
-a_game = Engine(a_map)
+a_game = Engine(a_map) # missing an argument
 a_game.play()
