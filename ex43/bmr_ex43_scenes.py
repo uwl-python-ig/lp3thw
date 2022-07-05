@@ -3,12 +3,12 @@ from textwrap import dedent
 from sys import exit
 
 class Scene(object):
+
     def enter(self):
         print("not yet configured")
         print("subclass it and implement enter()")
         exit(1)
 
-# Child classes Death, CentralCorridor, LaserWeaponArmory, TheBridge, EscapePod
 class Death(Scene):
 
     quips = [
@@ -96,6 +96,7 @@ class TheRiver(Scene):
                 deal about this forest. I think everyone's pretty nice, really.'
                 """))
             return 'finished'
+
         else:
             print(dedent("""
                 She looks in your eyes and says:
@@ -110,4 +111,4 @@ class Finished(Scene):
             You return to the village with a spring in your step and the Sword of 
             Guessing a Number Between One and Ten by your side.
             """))
-        return 'finished' # I think this may be significant
+        return 'finished'
