@@ -1,8 +1,6 @@
 # lp3thw
 
-[![hackmd-github-sync-badge](https://hackmd.io/z49cQi0qTeKgCL9vxjdlog/badge)](https://hackmd.io/z49cQi0qTeKgCL9vxjdlog)
-
-Some [PIG](https://github.com/uw-libraries-python-interest-group) members are working through [Learn Python 3 the Hard Way](https://alliance-primo.hosted.exlibrisgroup.com/permalink/f/l9c4fq/CP71290856150001451) and sharing work here.
+Some [UWL Python IG](https://github.com/uwl-python-ig) members are working through [Learn Python 3 the Hard Way](https://alliance-primo.hosted.exlibrisgroup.com/permalink/f/l9c4fq/CP71290856150001451) and sharing work here.
 ## Naming and sharing files
 - There is (or will be) a directory for each exercise in the book; store your files for a given exercise in a corresponding directory
 - Add your initials, or some other distinguishing string, to your filenames to avoid overwriting someone else's work
