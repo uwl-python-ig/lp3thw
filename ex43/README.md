@@ -1,7 +1,9 @@
 # EX 43 NOTES
 
 ## bmr
-At time of writing, this exercise is very difficult and I don't understand what is happening in the code. I looked over posts in the authors [Learn Code Forum](https://forum.learncodethehardway.com/) for help.
+2022-08: This exercise is very difficult and I don't understand what is happening in the code. Including some of what I've looked at below. But I'm just moving on to the next exercise at this point.
+
+### Posts in [Learn Code Forum](https://forum.learncodethehardway.com/)
 - **Yet another 'Engine' post (ex43)** includes a [post from the author]](https://forum.learncodethehardway.com/t/yet-another-engine-post-ex43/5274/5)
 - So does **[Exercise 43, some explanation needed](https://forum.learncodethehardway.com/t/exercise-43-some-explanation-needed/3243/8)**
 
@@ -14,5 +16,4 @@ At time of writing, this exercise is very difficult and I don't understand what 
 #### dictionary.get()
 - See [pydocs](https://docs.python.org/3.8/library/stdtypes.html?highlight=get#dict.get) (v3.8)
 - See a Programiz [tutorial](https://www.programiz.com/python-programming/methods/dictionary/get)
-
 
