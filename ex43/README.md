@@ -1,7 +1,7 @@
 # EX 43 NOTES
 
 ## bmr
-2022-08: This exercise is very difficult and I don't understand what is happening in the code. Including some of what I've looked at below. But I'm just moving on to the next exercise at this point.
+2022-08: This exercise is very difficult and I don't fully understand what is happening in the code. Including some of what I've looked at below. But I'm just moving on to the next exercise at this point.
 
 ### Posts in [Learn Code Forum](https://forum.learncodethehardway.com/)
 - **Yet another 'Engine' post (ex43)** includes a [post from the author]](https://forum.learncodethehardway.com/t/yet-another-engine-post-ex43/5274/5)
