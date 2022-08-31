@@ -1,12 +1,10 @@
 
 class Region(object):
-    def __init__(self, description):
-        self.description = description
 
     def describe(self):
-        print(self.description)
+        print("implement enter() for each Region subclass")
 
 class Grasslands(Region):
-    def __init__(self, description):
-        # I should be able to use inheritance to avoid having to define var below?
-        self.description = description
+    
+    def describe(self):
+        print("Golden wheat stretches to the horizon, swaying gently in the breeze.")
