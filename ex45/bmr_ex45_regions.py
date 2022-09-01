@@ -1,10 +1,22 @@
 
 class Region(object):
-
-    def describe(self):
-        print("implement enter() for each Region subclass")
+    pass
 
 class Grasslands(Region):
     
+    appellation = "The Grasslands"
+    description = 'Golden wheat stretches out as far as the eye can see in every direction'
+    adjacent = ['Mountains']
+    
+    # ok this works but why not implement describe() in the parent class??
     def describe(self):
-        print("Golden wheat stretches to the horizon, swaying gently in the breeze.")
+        print(Grasslands.description)
+
+class Mountains(Region):
+
+    appellation = "The Mountains"
+    description = 'Graggy granite peaks'
+    adjacent = ['Grasslands']
+
+    def describe(self):
+        print(Mountains.description)
