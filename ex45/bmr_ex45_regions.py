@@ -4,19 +4,16 @@ class Region(object):
 
 class Grasslands(Region):
     
-    appellation = "The Grasslands"
-    description = 'Golden wheat stretches out as far as the eye can see in every direction'
-    adjacent = ['Mountains']
-    
-    # ok this works but why not implement describe() in the parent class??
-    def describe(self):
-        print(Grasslands.description)
+    # better to implement vars in the parent class, then override values in child classes?
+    appellation = "the grasslands"
+    description = 'golden wheat stretches out as far as the eye can see in every direction'
+    # add adjacent region(s) to create choice of where to go next
+    creatures = ['unicorn']
 
 class Mountains(Region):
 
     appellation = "The Mountains"
     description = 'Graggy granite peaks'
-    adjacent = ['Grasslands']
+    # add adjacent region(s) to create choice for where to go next
+    creatures = ['troll']
 
-    def describe(self):
-        print(Mountains.description)
