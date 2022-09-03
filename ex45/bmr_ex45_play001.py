@@ -9,12 +9,16 @@ unicorn = Unicorn()
 troll = Troll()
 
 regions = [grass, mountain]
+
 '''
+this var caused the two creature methods to run before begin()...why!?
+
 encounters = {
     'unicorn': unicorn.encounter() ,
     'troll': troll.encounter() 
 }
 '''
+
 present_location = 'NOT_SET'
 
 def begin():
